@@ -200,7 +200,7 @@ const server = Bun.serve<{ username: string }>({
 console.log(`Listening on ${server.hostname}:${server.port}`);
 ```
 
-Calling `.publish(data)` will send the message to all subscribers of a topic _except_ the socket that called `.publish()`.
+Calling `ws.publish(data)` will send the message to all subscribers of a topic _except_ the socket that called `ws.publish()`. Calling `server.publish(data)` will send the message to all subscribers.
 
 ### Compression
 
